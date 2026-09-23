@@ -1,0 +1,240 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
+body {
+font-family: Arial, Helvetica, sans-serif;
+background: #daaadf;
+color: #333;
+background-image: url(imagem.png);
+
+}
+
+/* CABEÇALHO */
+
+header {
+background: #6f0f7c;
+color: #f4f6f9;
+text-align: center;
+padding: 35px 20px;
+
+}
+
+header h1 {
+font-size: 32px;
+margin-bottom: 8px;
+}
+
+header p {
+font-size: 16px;
+opacity: 0.9;
+}
+
+/* CONTEÚDO */
+
+main {
+width: 90%;
+max-width: 1000px;
+margin: 30px auto;
+}
+
+/* CARDS */
+
+.card {
+background: white;
+border-radius: 12px;
+padding: 25px;
+margin-bottom: 25px;
+box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+.card h2 {
+margin-bottom: 20px;
+color: #791d79;
+}
+
+/* FORMULÁRIO */
+
+.formulario {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 20px;
+}
+
+.campo {
+display: flex;
+flex-direction: column;
+}
+
+.campo label {
+font-weight: bold;
+margin-bottom: 8px;
+}
+
+input,
+select {
+width: 100%;
+padding: 12px;
+border: 1px solid #ccc;
+border-radius: 7px;
+font-size: 15px;
+outline: none;
+}
+
+input:focus,
+select:focus {
+border-color: #7c0e7c;
+}
+
+/* BOTÕES */
+
+button {
+background: #770d77;
+color: white;
+border: none;
+border-radius: 7px;
+padding: 12px 20px;
+font-size: 15px;
+font-weight: bold;
+cursor: pointer;
+transition: 0.2s;
+}
+
+button:hover {
+background: #570c5e;
+}
+
+.formulario button {
+grid-column: 1 / 3;
+}
+
+/* MENSAGENS */
+
+#mensagemCadastro {
+margin-top: 15px;
+}
+
+.sucesso {
+background: #dcfce7;
+color: #57135e;
+padding: 12px;
+border-radius: 7px;
+}
+
+.erro {
+background: #f56565;
+color: #080000;
+padding: 12px;
+border-radius: 7px;
+}
+
+/* BUSCA */
+
+.busca {
+display: flex;
+gap: 10px;
+}
+
+.busca input {
+flex: 1;
+}
+
+/* RESULTADO */
+
+.resultado {
+margin-top: 20px;
+padding: 18px;
+border-radius: 8px;
+background: #eff6ff;
+border-left: 5px solid #690a7c;
+}
+
+.resultado strong {
+color: #711788;
+}
+
+/* LISTAGEM */
+
+.titulo-listagem {
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.botao-atualizar {
+background: #730a9c;
+}
+
+.botao-atualizar:hover {
+background: #58067e;
+}
+
+/* CAMPUS */
+
+.campus {
+margin-bottom: 20px;
+}
+
+.campus h3 {
+background: #79208b;
+color: white;
+padding: 12px 15px;
+border-radius: 7px 7px 0 0;
+}
+
+.lista {
+list-style: none;
+border: 1px solid #ddd;
+border-top: none;
+border-radius: 0 0 7px 7px;
+}
+
+.lista li {
+padding: 11px 15px;
+border-bottom: 1px solid #eee;
+}
+
+.lista li:last-child {
+border-bottom: none;
+}
+
+.vazio {
+padding: 15px;
+color: #777;
+font-style: italic;
+}
+
+/* RODAPÉ */
+
+footer {
+text-align: center;
+padding: 25px;
+color: #777;
+font-size: 14px;
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 700px) {
+
+.formulario {
+    grid-template-columns: 1fr;
+}
+
+.formulario button {
+    grid-column: 1;
+}
+
+.busca {
+    flex-direction: column;
+}
+
+.titulo-listagem {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+}

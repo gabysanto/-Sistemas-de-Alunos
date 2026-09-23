@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sistema de Alunos</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>🎓 SEJAM BEM-VINDOS!</h1>
+        <p>Página para cadastro de alunos e localização por campus.</p>
+    </header>
+
+    <main>
+
+        <!-- CADASTRO -->
+        <section class="card">
+
+            <h2>👤 Cadastrar Aluno</h2>
+
+            <div class="formulario">
+
+                <div class="campo">
+                    <label for="nomeAluno">Nome do aluno</label>
+
+                    <input
+                        type="text"
+                        id="nomeAluno"
+                        placeholder="Digite o nome do aluno"
+                    >
+                </div>
+
+                <div class="campo">
+                    <label for="campusAluno">Campus</label>
+
+                    <select id="campusAluno">
+                        <option value="">Selecione o campus</option>
+                        <option value="Anália Franco">Anália Franco</option>
+                        <option value="Guarulhos">Guarulhos</option>
+                        <option value="Liberdade">Liberdade</option>
+                        <option value="Paulista">Paulista</option>
+                        <option value="São Miguel">São Miguel</option>
+                        <option value="Santo Amaro">Santo Amaro</option>
+                        <option value="Villa Lobos">Villa Lobos</option>
+                    </select>
+                </div>
+
+                <button onclick="cadastrarAluno()">
+                    Cadastrar Aluno
+                </button>
+
+            </div>
+
+            <div id="mensagemCadastro"></div>
+
+        </section>
+
+
+        <!-- BUSCAR -->
+        <section class="card">
+
+            <h2>🔎 Localizar Aluno</h2>
+
+            <div class="busca">
+
+                <input
+                    type="text"
+                    id="nomeBusca"
+                    placeholder="Digite o nome do aluno"
+                >
+
+                <button onclick="localizarAluno()">
+                    Localizar
+                </button>
+
+            </div>
+
+            <div id="resultadoBusca"></div>
+
+        </section>
+
+
+        <!-- LISTAGEM -->
+        <section class="card">
+
+            <div class="titulo-listagem">
+
+                <h2>📋 Alunos cadastrados</h2>
+
+                <button
+                    class="botao-atualizar"
+                    onclick="atualizarLista()"
+                >
+                    Atualizar
+                </button>
+
+            </div>
+
+            <div id="listaAlunos"></div>
+
+        </section>
+
+    </main>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
